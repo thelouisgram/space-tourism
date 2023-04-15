@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 
-const Home = () => {
+const Technology = () => {
   return (
-    <section id='home' className='h-[100vh] w-full'>
+    <section>
       <Navbar />
     </section>
   )
 }
 
-export default Home
+export default Technology
