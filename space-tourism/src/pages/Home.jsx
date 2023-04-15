@@ -3,8 +3,30 @@ import Navbar from '../components/Navbar'
 
 const Home = () => {
   return (
-    <section id='home' className='h-[100vh] w-full'>
+    // Home page 
+    <section id='home' className='w-full'>
+      {/* Navbar components */}
       <Navbar />
+      {/* Homepage content */}
+      <div className='flex flex-col text-center justify-center items-center md:text-left  md:items-center md:flex-row md:px-44 md:pt-24 '>
+        {/* Left Div */}
+        <div className='w-full px-6 my-20 md-px-0 md:pb-24 md:m-0 ss:my-32'>
+          <h3 className='text-[18px] ss:text-[26px] font-BarlowCondensed text-babyBlue tracking-[0.3rem]'>SO, YOU WANT TO TRAVEL TO</h3>
+          <h1 className='text-[100px] font-Bellefair text-white ss:text-[140px]'>SPACE</h1>
+          <p className='md:w-[470px] text-base ss:leading-[1.9rem] md:leading-0 ss:text-[17px] md:text-[16px] font-Barlow md:font-BarlowCondensed tracking-[0.1rem] text-babyBlue'>
+            Let’s face it; if you want to go to space, you might 
+            as well <br className='ss:flex hidden'/> genuinely go to outer space and not hover kind 
+            of on the <br className='md:flex hidden' />edge of <br className='ss:flex md:hidden hidden'/> it. Well sit back, and relax because 
+            we’ll give you<br className='md:flex hidden' /> a truly out of <br className='ss:flex md:hidden hidden' />  this world experience!
+          </p>
+        </div>
+        {/* Right Div */}
+        <div className=' flex flex-1 flex-row items-center justify-end mb-24 ss:mb-48 md:mb-0'>
+          <div className='bg-white rounded-full h-[200px] w-[200px] flex items-center justify-center'>
+            <h2 className='font-Bellefair text-midnightBlue text-[28px]'>EXPLORE</h2>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
