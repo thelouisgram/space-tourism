@@ -18,20 +18,33 @@
     min-height:100vh;
 }
 
-.glass {
-  background-color: rgba(255, 255, 255, 0.05); 
-  backdrop-filter: blur(15px); 
+#destination{
+    background-image: url('./assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
 }
 
-
 @media (max-width: 1023px){
-    #home{
+  #home{
     background-image: url('./assets/home/background-home-tablet.jpg');
-    }
+}
+
+  #destination{
+    background-image: url('./assets/destination/background-destination-tablet.jpg');
+}
 }
 
 @media (max-width: 620px){
     #home{
     background-image: url('./assets/home/background-home-mobile.jpg');
     }
+    #destination{
+    background-image: url('./assets/destination/background-destination-mobile.jpg');
+}
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(15px); 
 }

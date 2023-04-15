@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import {Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         {/* Left Div */}
         <div className='w-full px-6 my-20 md-px-0 md:pb-24 md:m-0 ss:my-32'>
           <h3 className='text-[18px] ss:text-[26px] font-BarlowCondensed text-babyBlue tracking-[0.3rem]'>SO, YOU WANT TO TRAVEL TO</h3>
-          <h1 className='text-[100px] font-Bellefair text-white ss:text-[140px]'>SPACE</h1>
+          <h1 className='text-[90px] font-Bellefair text-white ss:text-[140px]'>SPACE</h1>
           <p className='md:w-[470px] text-base ss:leading-[1.9rem] md:leading-0 ss:text-[17px] md:text-[16px] font-Barlow md:font-BarlowCondensed tracking-[0.1rem] text-babyBlue'>
             Let’s face it; if you want to go to space, you might 
             as well <br className='ss:flex hidden'/> genuinely go to outer space and not hover kind 
@@ -21,10 +22,10 @@ const Home = () => {
           </p>
         </div>
         {/* Right Div */}
-        <div className=' flex flex-1 flex-row items-center justify-end mb-24 ss:mb-48 md:mb-0'>
-          <div className='bg-white rounded-full h-[200px] w-[200px] flex items-center justify-center'>
+        <div className=' flex flex-1 flex-row items-center cursor-pointer justify-end mb-24 ss:mb-48 md:mb-0'>
+          <Link to='/destination'><div className='bg-white rounded-full h-[200px] w-[200px] flex items-center justify-center'>
             <h2 className='font-Bellefair text-midnightBlue text-[28px]'>EXPLORE</h2>
-          </div>
+          </div></Link>
         </div>
       </div>
     </section>
