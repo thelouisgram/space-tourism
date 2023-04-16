@@ -48,3 +48,28 @@
   background-color: rgba(255, 255, 255, 0.05); 
   backdrop-filter: blur(15px); 
 }
+
+
+.name-active {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.name-active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+
+.active-content{
+  display: flex;
+}
+
+.inactive-content{
+  display:none;
+}
