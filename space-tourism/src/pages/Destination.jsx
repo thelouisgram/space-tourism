@@ -20,7 +20,8 @@ const Destination = () => {
 				key={index}
 			>
 				<h4
-					className={`text-babyBlue cursor-pointer font-BarlowCondensed uppercase text-[16px] ss:mt-6 md:mt-0 mb-6 tracking-[0.25rem]
+					className={`text-babyBlue cursor-pointer font-BarlowCondensed uppercase text-[14px] ss:text-[16px]
+          ss:mt-6 md:mt-0 mb-6 tracking-[0.15rem] ss:tracking-[0.25rem]
         ${currentSlide === index ? 'name-active' : 'name'}`}
 				>
 					{name.name}
@@ -65,7 +66,8 @@ const Destination = () => {
 		<section id="destination">
 			{/* imported Navbar */}
 			<Navbar />
-			<div className="flex gap-6 tracking-[0.25rem] justify-center mt-8 ss:mt-0 ss:justify-start ss:pt-10 md:pt-8 ss:pl-10 md:pl-44">
+			<div className="flex gap-4 ss:gap-6 tracking-[0.25rem] justify-center mt-8 
+      ss:mt-0 ss:justify-start ss:pt-10 md:pt-8 ss:pl-10 md:pl-44">
 				<h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] font-bold text-semiWhite">01</h3>
         <h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] text-white ">PICK YOUR DESTINATION</h3>
 			</div>

@@ -13,7 +13,7 @@ const Home = () => {
         {/* Left Div */}
         <div className='w-full px-6 my-20 md-px-0 md:pb-24 md:m-0 ss:my-32'>
           <h3 className='text-[18px] ss:text-[26px] font-BarlowCondensed text-babyBlue tracking-[0.3rem]'>SO, YOU WANT TO TRAVEL TO</h3>
-          <h1 className='text-[90px] font-Bellefair text-white ss:text-[140px]'>SPACE</h1>
+          <h1 className='text-[80px] font-Bellefair text-white ss:text-[140px]'>SPACE</h1>
           <p className='md:w-[470px] text-base ss:leading-[1.9rem] md:leading-0 ss:text-[17px] md:text-[16px] font-Barlow md:font-BarlowCondensed tracking-[0.1rem] text-babyBlue'>
             Let’s face it; if you want to go to space, you might 
             as well <br className='ss:flex hidden'/> genuinely go to outer space and not hover kind 
