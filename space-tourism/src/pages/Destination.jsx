@@ -70,7 +70,7 @@ const Destination = () => {
 				{/* Left Div */}
 				<div className="flex flex-1 ">{image}</div>
 				{/* Right Div */}
-				<div className="flex flex-1 flex-col items-center md:items-start">
+				<div className="flex flex-1 flex-col items-center md:mr-10 md:items-start">
 					<div className="flex gap-5 ss:gap-8 ">{names}</div>
 					{content}
 				</div>
