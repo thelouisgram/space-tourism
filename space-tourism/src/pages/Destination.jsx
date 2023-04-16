@@ -51,7 +51,7 @@ const Destination = () => {
 		return (
       <div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} max-w-[250px] max-h-[250px] 
       ss:max-w-[450px] ss:max-h-[450px] md:max-w-[450px] md:max-h-[450px]`}>
-				<img src={image.images.webp} className="w-full h-full" alt="destination image" />
+				<img src={image.images.png} className="w-full h-full" alt="destination image" />
 			</div>
 		);
 	});
