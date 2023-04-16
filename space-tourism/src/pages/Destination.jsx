@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import data from '../data.json';
+import {moon, mars, europa, titan} from '../assets/destination/index'
 
 const Destination = () => {
 	const [ currentSlide, setCurrentSlide ] = useState(0);
 	const destination = data.destinations;
+
+
+  const images = [moon, mars, europa, titan]
 
 	// Destination Names and paginations
 	const names = destination.map((name, index) => {
@@ -47,11 +51,11 @@ const Destination = () => {
 		);
 	});
 
-	const image = destination.map((image, index) => {
+	const image = images.map((image, index) => {
 		return (
       <div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} max-w-[250px] max-h-[250px] 
       ss:max-w-[450px] ss:max-h-[450px] md:max-w-[450px] md:max-h-[450px]`}>
-				<img src={image.images.png} className="w-full h-full" alt="destination image" />
+				<img src={image} className="w-full h-full" alt="destination image" />
 			</div>
 		);
 	});
