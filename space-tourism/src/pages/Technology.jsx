@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import data from '../data.json';
-import {launchVehiclePortrait, launchVehicleLandscape, spaceCapsulePortrait,
-spaceCapsuleLandscape, spaceportPortrait, spaceportLandscape} from '../../public/assets/technology/index'
+import {
+  launchVehiclePortrait, launchVehicleLandscape, spaceCapsulePortrait,
+  spaceCapsuleLandscape, spaceportPortrait, spaceportLandscape
+} from '../assets/technology/index'
 
 const Technology = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -11,10 +13,10 @@ const Technology = () => {
   const images = [
     { 'portrait': launchVehiclePortrait, 'landscape': launchVehicleLandscape },
     { 'portrait': spaceportPortrait, 'landscape': spaceportLandscape },
-    { 'portrait': spaceCapsulePortrait, 'landscape': spaceCapsuleLandscape},
+    { 'portrait': spaceCapsulePortrait, 'landscape': spaceCapsuleLandscape },
   ]
 
-  const paginations = [ 1, 2, 3]
+  const paginations = [1, 2, 3]
 
   // pagination
   const page = paginations.map((page, index) => {
@@ -24,11 +26,11 @@ const Technology = () => {
         onClick={() => {
           setCurrentSlide(index);
         }}
-          className={` inactive-page cursor-pointer font-Bellefair border-[1px] rounded-full 
+        className={` inactive-page cursor-pointer font-Bellefair border-[1px] rounded-full 
           text-[18px] ss:text-[36px] w-[40px] h-[40px] ss:w-[84px] ss:h-[84px]
         ${currentSlide === index ? 'active-page' : ''}`}
-        >{page}
-        </div>
+      >{page}
+      </div>
     );
   });
 
@@ -73,8 +75,8 @@ const Technology = () => {
       <div className='md:pl-44 flex flex-col-reverse md:flex-row items-center md:gap-16 md:mt-6'>
         {/* Left Div */}
         <div className='flex items-center flex-col md:items-start md:gap-8 md:flex-row'>
-        <div className='flex mb-6 ss:mb-0 md:flex-col gap-4 ss:gap-8'>{page}</div>
-        <div>{tech}</div>
+          <div className='flex mb-6 ss:mb-0 md:flex-col gap-4 ss:gap-8'>{page}</div>
+          <div>{tech}</div>
         </div>
         {/* Right Div */}
         <div>{image}</div>

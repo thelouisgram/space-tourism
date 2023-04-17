@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import data from '../data.json';
-import {moon, mars, europa, titan} from '../../public/assets/destination/index'
+import { moon, mars, europa, titan } from '../assets/destination/index'
 
 const Destination = () => {
-	const [ currentSlide, setCurrentSlide ] = useState(0);
+	const [currentSlide, setCurrentSlide] = useState(0);
 	const destination = data.destinations;
 
 
-  const images = [moon, mars, europa, titan]
+	const images = [moon, mars, europa, titan]
 
 	// Destination Names and paginations
 	const names = destination.map((name, index) => {
@@ -43,9 +43,9 @@ const Destination = () => {
 						<h4 className="text-babyBlue font-BarlowCondensed text-[16px] font-bold">AVG. DISTANCE</h4>
 						<h3 className="text-white font-Bellefair text-[28px] md:text-[32px] uppercase">{content.distance}</h3>
 					</div>
-          <div className='ss:text-left'>
+					<div className='ss:text-left'>
 						<h4 className="text-babyBlue font-BarlowCondensed text-[16px] font-bold">EST. TRAVEL TIME</h4>
-            <h3 className="text-white font-Bellefair text-[28px] md:text-[32px] uppercase">{content.travel}</h3>
+						<h3 className="text-white font-Bellefair text-[28px] md:text-[32px] uppercase">{content.travel}</h3>
 					</div>
 				</div>
 			</div>
@@ -54,7 +54,7 @@ const Destination = () => {
 
 	const image = images.map((image, index) => {
 		return (
-      <div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} max-w-[250px] max-h-[250px] 
+			<div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} max-w-[250px] max-h-[250px] 
       ss:max-w-[450px] ss:max-h-[450px] md:max-w-[450px] md:max-h-[450px]`}>
 				<img src={image} className="w-full h-full" alt="destination image" />
 			</div>
@@ -69,7 +69,7 @@ const Destination = () => {
 			<div className="flex gap-4 ss:gap-6 tracking-[0.25rem] justify-center mt-8 
       ss:mt-0 ss:justify-start ss:pt-10 md:pt-8 ss:pl-10 md:pl-44">
 				<h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] font-bold text-semiWhite">01</h3>
-        <h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] text-white ">PICK YOUR DESTINATION</h3>
+				<h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] text-white ">PICK YOUR DESTINATION</h3>
 			</div>
 			{/* Destination container */}
 			<div className="flex flex-col items-center md:flex-row md:pl-44 md:items-center py-12 ss:py-24 gap-8">
