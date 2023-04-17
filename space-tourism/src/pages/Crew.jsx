@@ -58,7 +58,7 @@ const Crew = () => {
         <h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] font-bold text-semiWhite">02</h3>
         <h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] text-white ">MEET YOUR CREW</h3>
       </div>
-      {/* Destination container */}
+      {/* Crew container */}
       <div className="flex flex-col-reverse ss:flex-col items-center pb-12 ss:pb-0 md:flex-row md:pl-44 md:items-center gap-8">
         <div className='flex flex-1 flex-col-reverse ss:flex-col'>
         <div>{content}</div>

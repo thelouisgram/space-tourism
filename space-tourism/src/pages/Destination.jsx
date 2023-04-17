@@ -20,9 +20,9 @@ const Destination = () => {
 				key={index}
 			>
 				<h4
-					className={`text-babyBlue cursor-pointer font-BarlowCondensed uppercase text-[14px] ss:text-[16px]
+					className={`name text-babyBlue cursor-pointer font-BarlowCondensed uppercase text-[14px] ss:text-[16px]
           ss:mt-6 md:mt-0 mb-6 tracking-[0.15rem] ss:tracking-[0.25rem]
-        ${currentSlide === index ? 'name-active' : 'name'}`}
+        ${currentSlide === index ? 'name-active' : ''}`}
 				>
 					{name.name}
 				</h4>

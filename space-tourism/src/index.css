@@ -33,6 +33,13 @@
     min-height:100vh;
 }
 
+#technology{
+    background-image: url('./assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+}
+
 @media (max-width: 1023px){
   #home{
     background-image: url('./assets/home/background-home-tablet.jpg');
@@ -43,6 +50,9 @@
 }
   #crew{
     background-image: url('./assets/crew/background-crew-tablet.jpg');
+}
+  #technology{
+    background-image: url('./assets/technology/background-technology-tablet.jpg');
 }
 }
 
@@ -56,6 +66,9 @@
     #crew{
     background-image: url('./assets/crew/background-crew-mobile.jpg');
 }
+    #technology{
+    background-image: url('./assets/technology/background-technology-mobile.jpg');
+}
 }
 
 .glass {
@@ -63,20 +76,29 @@
   backdrop-filter: blur(15px); 
 }
 
-
-.name-active {
-  color: white;
+.name {
   position: relative;
-  z-index: 2;
+  display: inline-block;
 }
 
-.name-active::after {
+.name::after {
   content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 3px;
+  background-color: hsl(225, 54%, 88%);
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.name-active::after,
+.name:hover::after {
+  transform: scaleX(1);
+}
+
+.name-active::after{
   background-color: white;
 }
 
@@ -86,4 +108,23 @@
 
 .inactive-content{
   display:none;
+}
+
+.inactive-page{
+  border-radius: 50%;
+  border: solid 1px hsl(0, 0%, 100%, 0.25);
+  background-color: transparent;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inactive-page:hover{
+  border: solid 1px white;
+}
+
+.active-page{
+  background-color: white;
+  color: hsl(220, 33%, 9%);
 }
