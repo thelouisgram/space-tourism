@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { logo, hamburger, close } from '../assets/shared';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
 	const [ menu, setMenu ] = useState(false);
@@ -17,11 +17,12 @@ const Navbar = () => {
 		// Navbar
 		<nav className="py-6 px-6 flex justify-between items-center ss:pl-10 ss:p-0 md:py-12  md:pl-16  md:">
 			{/* Logo container */}
-			<div className=" md:pl-0">
+			<Link to='/'><div className=" md:pl-0">
 				<img src={logo} className="h-[40px] ss:h-[50px] w-auto" alt="Logo" />
-			</div>
+			</div></Link>
 			{/* > Tablet NavNavLinks */}
-			<div className="glass hidden ss:flex ss:p-10 md:pl-32 md:pr-36 gap-12 ss:py-7 tracking-[0.15rem] ">
+			<div className="glass hidden items-center ss:flex ss:p-10 md:pl-32 md:pr-36 gap-12 ss:py-7 tracking-[0.15rem] relative">
+				<div className='nav-line absolute right-[46em] bg-semiWhite w-[425px] h-[1px] ' />
         <NavLink to="/" className={getLinkClassName}>
           <h4 className="font-[600] text-[17px] hidden md:flex">00</h4>
           <h5 className="text-[17px]">HOME</h5>
@@ -46,7 +47,7 @@ const Navbar = () => {
 			{/* Mobile NavNavLinks */}
 			{menu && (
 				<div className="h-[100vh] w-[250px] flex ss:hidden flex-col z-[10]
-      items-start gap-6 glass fixed top-0 right-0 p-6">
+      				items-start gap-6 glass fixed top-0 right-0 p-6">
 					<div onClick={toggleMenu} className="mb-12 relative flex items-end cursor-pointer w-full">
 						<img src={close} className="absolute right-0 top-2 w-[30px] h-auto" />
 					</div>

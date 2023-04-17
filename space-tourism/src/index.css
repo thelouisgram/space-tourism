@@ -156,6 +156,24 @@
 }
 
 
+@media (max-width: 1440px){
+.nav-line{
+    width:435px;
+}
+}
+
+@media (max-width: 1300px){
+.nav-line{
+    display:none;
+}
+}
+
+@media (min-width: 1440px){
+.nav-line{
+    width:585px;
+}
+}
+
 @media (max-width: 620px){
 .link::after {
   content: "";
