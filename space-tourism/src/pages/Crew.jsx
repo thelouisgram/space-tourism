@@ -1,13 +1,11 @@
 import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
-import {anousheh, douglas, mark, victor} from '../assets/crew/index'
 import data from '../data.json';
 
 const Crew = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const crew = data.crew;
 
-  const images= [douglas, mark, victor, anousheh]
 
   // Crew paginations
   const page = crew.map((page, index) => {
@@ -39,10 +37,10 @@ const Crew = () => {
     )
   })
 
-  const image = images.map((image, index) => {
+  const image = crew.map((image, index) => {
 		return (
       <div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} px-24 ss:px-0 md:mr-24`}>
-				<img src={image} className="w-full h-full border-b-[1px] border-semiWhite" alt="{crew member image}" />
+				<img src={image.images[1]} className="w-full h-full border-b-[1px] border-semiWhite" alt="{crew member image}" />
 			</div>
 		);
 	});

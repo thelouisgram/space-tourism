@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { logo, hamburger, close } from '../assets/shared'
+import { logo, hamburger, close } from '../../public/assets/shared'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
