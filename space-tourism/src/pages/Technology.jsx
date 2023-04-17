@@ -9,9 +9,9 @@ const Technology = () => {
   const technology = data.technology;
 
   const images = [
-    { 'portrait': launchVehiclePortrait, 'landscape': launchVehicleLandscape},
     { 'portrait': spaceCapsulePortrait, 'landscape': spaceCapsuleLandscape},
-    { 'portrait': spaceportPortrait, 'landscape': spaceportLandscape}
+    { 'portrait': spaceportPortrait, 'landscape': spaceportLandscape },
+    { 'portrait': launchVehiclePortrait, 'landscape': launchVehicleLandscape },
   ]
 
   const paginations = [ 1, 2, 3]
