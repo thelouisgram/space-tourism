@@ -72,7 +72,7 @@ const Technology = () => {
       {/* Destination container */}
       <div className='md:pl-44 flex flex-col-reverse md:flex-row items-center md:gap-16 md:mt-6'>
         {/* Left Div */}
-        <div className='flex items-center flex-col md:items-start md:flex-col-reverse'>
+        <div className='flex items-center flex-col md:items-start md:gap-8 md:flex-row'>
         <div className='flex mb-6 ss:mb-0 md:flex-col gap-4 ss:gap-8'>{page}</div>
         <div>{tech}</div>
         </div>

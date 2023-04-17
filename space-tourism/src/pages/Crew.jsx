@@ -62,7 +62,7 @@ const Crew = () => {
       <div className="flex flex-col-reverse ss:flex-col items-center pb-12 ss:pb-0 md:flex-row md:pl-44 md:items-center gap-8">
         <div className='flex flex-1 flex-col-reverse ss:flex-col'>
         <div>{content}</div>
-        <div className='flex w-full gap-6 mb-6 ss:my-12 justify-center md:justify-start'>{page}</div>
+        <div className='flex w-full gap-3 ss:gap-6 mb-6 ss:my-12 justify-center md:justify-start'>{page}</div>
       </div>
       {/* // RightDiv */}
       <div className='flex flex-1 mt-10 ss:mt-0'>{image}</div>
