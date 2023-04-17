@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import data from '../data.json';
+import {launchVehiclePortrait, launchVehicleLandscape, spaceCapsulePortrait,
+spaceCapsuleLandscape, spaceportPortrait, spaceportLandscape} from '../../public/assets/technology/index'
 
 const Technology = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const technology = data.technology;
 
+  const images = [
+    { 'portrait': launchVehiclePortrait, 'landscape': launchVehicleLandscape },
+    { 'portrait': spaceportPortrait, 'landscape': spaceportLandscape },
+    { 'portrait': spaceCapsulePortrait, 'landscape': spaceCapsuleLandscape},
+  ]
 
   const paginations = [ 1, 2, 3]
 
@@ -41,12 +48,12 @@ const Technology = () => {
     )
   })
 
-  const image = technology.map((image, index) => {
+  const image = images.map((image, index) => {
     return (
       <div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} 
       my-8 md:my-0 w-full h-auto p-0`}>
-        <img src={image.images[0]} className="w-full hidden md:flex h-full " alt="{Technology Image}" />
-        <img src={image.images[1]} className="w-full flex md:hidden h-[200px] ss:min-h-[400px] object-cover" alt="{Technology Image}" />
+        <img src={image.portrait} className="w-full hidden md:flex h-full " alt="{Technology Image}" />
+        <img src={image.landscape} className="w-full flex md:hidden h-[200px] ss:min-h-[400px] object-cover" alt="{Technology Image}" />
       </div>
     );
   });
