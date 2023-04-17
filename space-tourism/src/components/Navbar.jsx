@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { logo, hamburger, close } from '../assets/shared'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
@@ -19,10 +19,31 @@ const Navbar = () => {
       <div className='hidden lg:flex h-[1px] w-[32%] left-44 z-[3] bg-semiWhite absolute' />
       {/* > Tablet NavLinks */}
       <div className='glass hidden ss:flex ss:p-10 md:pl-32 md:pr-36 gap-12 md:py-6 tracking-[0.15rem] '>
-        <Link to='/'><div className='flex gap-2 text-white font-BarlowCondensed items-center'><h4 className='font-[600] hidden md:flex'>00</h4><h5 className='text-[14px]'>HOME</h5></div></Link>
-        <Link to='/destination'><div className='flex gap-2 text-white font-BarlowCondensed items-center'><h4 className='font-[600] hidden md:flex'>01</h4><h5 className='text-[14px]'>DESTINATION</h5></div></Link>
-        <Link to='/crew'><div className='flex gap-2 text-white font-BarlowCondensed items-center'><h4 className='font-[600] hidden md:flex'>02</h4><h5 className='text-[14px]'>CREW</h5></div></Link>
-        <Link to='/technology'><div className='flex gap-2 text-white font-BarlowCondensed items-center'><h4 className='font-[600] hidden md:flex'>03</h4><h5 className='text-[14px]'>TECHNOLOGY</h5></div></Link>
+        <NavLink exact to='/' activeClassName='active-link'>
+          <div className='flex gap-2 text-white font-BarlowCondensed items-center'>
+            <h4 className='font-[600] hidden md:flex'>00</h4>
+            <h5 className='text-[14px]'>HOME</h5>
+          </div>
+        </NavLink>
+        <NavLink exact to='/destination' activeClassName='active-link'>
+          <div className='flex gap-2 text-white font-BarlowCondensed items-center'>
+            <h4 className='font-[600] hidden md:flex'>01</h4>
+            <h5 className='text-[14px]'>DESTINATION</h5>
+          </div>
+        </NavLink>
+        <NavLink exact to='/crew' activeClassName='active-link'>
+          <div className='flex gap-2 text-white font-BarlowCondensed items-center'>
+            <h4 className='font-[600] hidden md:flex'>02</h4>
+            <h5 className='text-[14px]'>CREW</h5>
+          </div>
+        </NavLink>
+        <NavLink exact to='/technology' activeClassName='active-link'>
+          <div className='flex gap-2 text-white font-BarlowCondensed items-center'>
+            <h4 className='font-[600] hidden md:flex'>03</h4>
+            <h5 className='text-[14px]'>TECHNOLOGY</h5>
+          </div>
+        </NavLink>
+
       </div>
       {/* Menu button */}
       <div onClick={toggleMenu} className='flex ss:hidden cursor-pointer'>
