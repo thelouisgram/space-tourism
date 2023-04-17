@@ -34,7 +34,7 @@ const Destination = () => {
 	const content = destination.map((content, index) => {
 		return (
 			<div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} px-6 ss:px-10 md:px-0 
-      text-center flex-col md:text-left`}>
+      			text-center flex-col md:text-left`}>
 				<h1 className="text-white text-[75px] ss:text-[100px] uppercase font-Bellefair">{content.name}</h1>
 				<p className="text-babyBlue font-Barlow text-[14px] ss:text-[20px] md:w-[425px] leading-[24px] ss:leading-[32px]">{content.description}</p>
 				<div className="h-[1px] md:w-[450px] bg-semiWhite my-12" />
@@ -72,7 +72,7 @@ const Destination = () => {
 				<h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] text-white ">PICK YOUR DESTINATION</h3>
 			</div>
 			{/* Destination container */}
-			<div className="flex flex-col items-center md:flex-row md:pl-44 md:items-center py-12 ss:py-24 gap-8">
+			<div className="flex flex-col items-center md:flex-row md:pl-44 md:items-center pt-12 pb-24 ss:py-24 gap-8">
 				{/* Left Div */}
 				<div className="flex flex-1 ">{image}</div>
 				{/* Right Div */}
