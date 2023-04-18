@@ -26,7 +26,7 @@ const Home = () => {
           <Link to='/destination'><div className='bg-white rounded-full h-[200px] w-[200px] 
           md:h-[250px] md:w-[250px] flex items-center justify-center hover:bg-opacity-75
           hover:scale-125 transform transition-all duration-500'>
-  <h2 className='font-Bellefair text-midnightBlue text-[28px]'>EXPLORE</h2>
+            <h2 className='font-Bellefair font-normal text-midnightBlue text-[28px]'>EXPLORE</h2>
 </div>
 </Link>
         </div>
