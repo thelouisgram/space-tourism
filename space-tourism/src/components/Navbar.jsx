@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { logo, hamburger, close } from '../assets/shared';
 import { NavLink, Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+
 
 const Navbar = () => {
 	const [ menu, setMenu ] = useState(false);
@@ -45,9 +47,15 @@ const Navbar = () => {
 				<img src={hamburger} className="w-[30px] h-auto " />
 			</div>
 			{/* Mobile NavNavLinks */}
-			{menu && (
-				<div className="h-[100vh] w-[250px] flex ss:hidden flex-col z-[10]
-      				items-start gap-6 glass fixed top-0 right-0 p-6">
+			<AnimatePresence>
+				{menu && (
+					<motion.div
+						className="h-[100vh] w-[250px] flex ss:hidden flex-col z-[10] items-start gap-6 glass fixed top-0 right-0 p-6"
+						initial={{ opacity: 0, x: '100%' }}
+						animate={{ opacity: 1, x: 0 }}
+						exit={{ opacity: 0, x: '100%' }}
+						transition={{ duration: 0.4 }}
+					>
 					<div onClick={toggleMenu} className="mb-12 relative flex items-end cursor-pointer w-full">
 						<img src={close} className="absolute right-0 top-2 w-[30px] h-auto" />
 					</div>
@@ -75,8 +83,9 @@ const Navbar = () => {
 							<h5 className="text-[17px]">TECHNOLOGY</h5>
 						</div>
 					</NavLink>
-				</div>
-			)}
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</nav>
 	);
 };

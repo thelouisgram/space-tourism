@@ -54,12 +54,17 @@ const Destination = () => {
 
 	const image = images.map((image, index) => {
 		return (
-			<div key={index} className={`${currentSlide === index ? 'active-content' : 'inactive-content'} max-w-[250px] max-h-[250px] 
-      ss:max-w-[450px] ss:max-h-[450px] md:max-w-[450px] md:max-h-[450px]`}>
+			<div
+				key={index}
+				className={`${currentSlide === index ? 'active-content' : 'inactive-content'} max-w-[250px] max-h-[250px] 
+      ss:max-w-[450px] ss:max-h-[450px] md:max-w-[450px] rotate-img md:max-h-[450px]`}
+			>
 				<img src={image} className="w-full h-full" alt="destination image" />
 			</div>
 		);
 	});
+
+
 
 	return (
 		// Page content
