@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import data from '../data.json';
 import { moon, mars, europa, titan } from '../assets/destination/index'
+import { motion } from 'framer-motion';
 
 const Destination = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,9 +58,16 @@ const Destination = () => {
 			<div
 				key={index}
 				className={`${currentSlide === index ? 'active-content' : 'inactive-content'} max-w-[250px] max-h-[250px] 
-      ss:max-w-[450px] ss:max-h-[450px] md:max-w-[450px] rotate-img md:max-h-[450px]`}
+      ss:max-w-[450px] ss:max-h-[450px] md:max-w-[450px] md:max-h-[450px]`}
 			>
-				<img src={image} className="w-full h-full" alt="destination image" />
+				<motion.div
+					animate={{ rotate: 360 }}
+					transition={{ duration: 15, repeat: Infinity, repeatType: "loop", ease: "linear" }}
+					style={{ willChange: "transform" }}
+				>
+					<img src={image} className="w-full h-full" alt="destination image" />
+				</motion.div>
+
 			</div>
 		);
 	});

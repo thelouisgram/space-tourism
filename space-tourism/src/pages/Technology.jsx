@@ -72,7 +72,7 @@ const Technology = () => {
         <h3 className="font-BarlowCondensed text-[18px] ss:text-[24px] text-white ">SPACE LAUNCH 101</h3>
       </div>
       {/* Destination container */}
-      <div className='md:pl-44 flex flex-col-reverse md:flex-row items-center md:gap-16 md:mt-6'>
+      <div className='md:pl-44 flex flex-col-reverse md:flex-row items-center md:justify-between md:gap-16 md:mt-6'>
         {/* Left Div */}
         <div className='flex items-center flex-col md:items-start md:gap-8 md:flex-row'>
           <div className='flex mb-6 ss:mb-0 md:flex-col gap-4 ss:gap-8'>{page}</div>
